@@ -1,0 +1,16 @@
+// Question 2
+// Un entier est encodé sur 32 bits, ainsi,
+// La taille maximale d'un entier que Java peut encoder est de 2^31 - 1 (1 bit de moins pour la négation) (Integer.MAX_VALUE)
+// Ainsi, il suffit d'additionner une variable proche de cette valeur avec une autre pour dépasser Integer.MAX_VALUE
+// Et on obtient un résultat négatif (dans notre cas)
+// Voici un exemple de programme qui donne un résultat négatif :
+x=2147483600
+y=48
+x=x+y
+// On obtient : -2147483648
+// En Python, avec le programme,
+// x=2147483600
+// y=48
+// x=x+y
+// print(x)
+// On obtient : 2147483648, ce qui est le bon résultat
