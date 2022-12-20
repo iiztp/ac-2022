@@ -29,12 +29,12 @@ public class Parser {
                 Value t0, t1;
                 if(terms[0].matches("[a-z]*")) t0 = new Variable(terms[0]); else t0 = new Entier(Integer.parseInt(terms[0]));
                 if (terms[1].matches("[a-z]*"))  t1 = new Variable(terms[1]); else t1 = new Entier(Integer.parseInt(terms[1]));
-                Instruction t = new AssignOperator(left,operator, t0, t1);
+                Instruction t = new AssignOperator(new Variable(left),operator, t0, t1);
                 vInstruction.add(t);
             } else {
                 Value t0;
                 if(right.matches("[a-z]*")) t0 = new Variable(right); else t0 = new Entier(Integer.parseInt(right));
-                Instruction t = new Assign(left, t0);
+                Instruction t = new Assign(new Variable(left), t0);
                 vInstruction.add(t);
             }
         }

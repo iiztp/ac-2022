@@ -2,13 +2,14 @@ package fr.ac.e.interpreter.instructions;
 
 import fr.ac.e.interpreter.SymbolTable;
 import fr.ac.e.interpreter.values.Value;
+import fr.ac.e.interpreter.values.Variable;
 
 public class AssignOperator extends Instruction{
     public String op;
     public Value t0;
     public Value t1;
 
-    public AssignOperator(String s, String ope, Value x, Value y){
+    public AssignOperator(Variable s, String ope, Value x, Value y){
         left = s;
         op = ope;
         t0 = x;
@@ -24,6 +25,16 @@ public class AssignOperator extends Instruction{
             default -> 0;
         };
         SymbolTable.table.addCorrespondance(left, i);
-        return 1;
+        return i;
+    }
+
+    @Override
+    public boolean contains(Variable l) {
+        return t0.equals(l) || t1.equals(l);
+    }
+
+    @Override
+    public String toString() {
+        return left + " = " + t0 + " " + op + " " + t1 + "\n";
     }
 }

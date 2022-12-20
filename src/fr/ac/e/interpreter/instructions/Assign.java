@@ -2,19 +2,33 @@ package fr.ac.e.interpreter.instructions;
 
 import fr.ac.e.interpreter.SymbolTable;
 import fr.ac.e.interpreter.values.Value;
+import fr.ac.e.interpreter.values.Variable;
 
 public class Assign extends Instruction
 {
     public Value right;
 
-    public Assign(String s, Value x) {
+    public Assign(Variable s, Value x) {
         left = s;
         right = x;
     }
 
     @Override
     public int evaluate() {
-        SymbolTable.table.addCorrespondance(left, right.evaluate());
-        return 1;
+        int r = right.evaluate();
+        SymbolTable.table.addCorrespondance(left, r);
+        return r;
     }
+
+    @Override
+    public boolean contains(Variable l) {
+        return right.equals(l);
+    }
+
+    @Override
+    public String toString() {
+        return left + " = " + right + "\n";
+    }
+
+
 }
