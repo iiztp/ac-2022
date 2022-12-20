@@ -1,8 +1,5 @@
+// Retiré du code car réaffectation
 x = 0
-x = 0
-x = x + 1
-x = x + 1
-y = 0
 // Optimisation a x = x puis retire du code
 x = x + 0
 // Optimisation a x = x puis retire du code
@@ -11,5 +8,9 @@ x = 0 + x
 x = x + 10
 // x est redéfini sans etre utilise, retire du code
 x = 0
-// Optimisation a x = 10 (car x = 0)
+// Optimisation a x = 10
 x = 10 + x
+// Pas d'optimisation
+x = 10 + x
+// Pas d'optimisation
+x = x + 10

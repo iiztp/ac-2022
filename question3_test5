@@ -1,4 +1,5 @@
-x = 4
+x = 1
 w = 4
-y = w - x
+y = x - x
 x = y * w
+// Opti en x = 0

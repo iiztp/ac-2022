@@ -1,14 +1,16 @@
+// Retiré du code car réaffectation
 x = 0
-y = 0
-// z non utilise, retire du code
-z = 0
-// Optimisation a x = x puis retire du code
-x = x + y
+// Optimisation a x = 0, retiré du code, x deja = 0
+x = x * 0
 // Optimisation a x = x puis retire du code
 x = x * 1
-// Optimisation a x = 0 puis retire du code (doublon x = 0)
-x = x * y
-// Optimisation a x = 2
-x = 1 * 2
-// Optimisation a x = 0
-x = x - x
+// Optimisation a x = 0, retiré du code, x deja = 0
+x = 0 * x
+// Optimisation a x = x, puis retire du code
+x = 1 * x
+// Pas d'optimisation
+x = 10
+// Pas d'optimisation
+x = x * 3
+// Pas d'optimisation
+x = 3 * x

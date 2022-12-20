@@ -1,12 +1,16 @@
+// Retiré du code car réaffectation
 x = 0
-y = 32
-// Optimisation a x = y car x = 0
-x = x + y
-// Pas d'optimisation, valeur de x inconnue
-x = x * 5
-// Pas d'optimisation valeur de x et y inconnue
-x = x * y
-// Pas d'optimisation 40 > 1
-x = 1 + 40
-// Pas d'optimisation x > 1
-x = 2 - x
+// Optimisation a x = x, puis retire du code
+x = x - 0
+// Optimisation x = 0 puis retire du code (x deja = 0)
+x = 0 - x
+// Optimisation x = 10, puis retire du code (jamais utilise)
+x = 10 - x
+// Optimisation x = 0, puis retire du code (jamais utilise)
+x = x - x
+// Optimisation x = 100 (x = 0 précédemment)
+x = x + 100
+// Pas d'optimisation
+x = x - 10
+// Pas d'optimisation
+x = 10 - x

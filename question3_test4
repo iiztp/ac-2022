@@ -1,12 +1,24 @@
+// Retiré du code, jamais utilisé
 x = 0
-y = 1
-// Optimisation a x = y car x = 0
+// Retiré du code, jamais utilisé
+y = 0
+// Changé en x = 0, puis retiré du code
+x = x * y
+x = x - y
 x = x + y
-// Pas d'optimisation, valeur de x inconnue
+// Changé en x = 0, puis retiré du code
+x = y * x
+x = y - x
+x = y + x
+// Changé en x = 0, puis retiré du code
 x = x * 5
-// Pas d'optimisation valuer de x et y inconnue
-x = y * 5
-// Pas d'optimisation 40 > 1
-x = 1 + 40
-// Pas d'optimisation x > 1
-x = 2 - x
+x = x + x
+x = x - x
+// Changé en x = 0, puis retiré du code
+x = 5 * y
+// Pas d'optimisation
+x = 10
+// Pas d'optimisation
+y = 10
+// Pas d'optimisation
+x = x * y
