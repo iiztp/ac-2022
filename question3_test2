@@ -1,0 +1,14 @@
+x = 0
+y = 0
+// z non utilise, retire du code
+z = 0
+// Optimisation a x = x puis retire du code
+x = x + y
+// Optimisation a x = x puis retire du code
+x = x * 1
+// Optimisation a x = 0 puis retire du code (doublon x = 0)
+x = x * y
+// Optimisation a x = 2
+x = 1 * 2
+// Optimisation a x = 0
+x = x - x
