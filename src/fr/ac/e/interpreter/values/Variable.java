@@ -15,6 +15,12 @@ public class Variable implements Value
     }
 
     @Override
+    public int moduloEvaluate(int number) {
+        // Le nombre est déjà modulo grâce à la classe Entier donc on renvoit evaluate
+        return evaluate();
+    }
+
+    @Override
     public int hashCode() {
         return 0;
     }

@@ -5,14 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8f11451-2d21-4086-81f3-611aaca5dc66" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/fr/ac/e/utils/RandomPrime.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/question3_test1" beforeDir="false" afterPath="$PROJECT_DIR$/question3_test1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/question3_test2" beforeDir="false" afterPath="$PROJECT_DIR$/question3_test2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/question3_test3" beforeDir="false" afterPath="$PROJECT_DIR$/question3_test3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/question3_test4" beforeDir="false" afterPath="$PROJECT_DIR$/question3_test4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/question3_test5" beforeDir="false" afterPath="$PROJECT_DIR$/question3_test5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fr/ac/e/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/ac/e/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/ac/e/interpreter/Evaluable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/ac/e/interpreter/Evaluable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/ac/e/interpreter/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/ac/e/interpreter/Program.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fr/ac/e/interpreter/Simplifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/ac/e/interpreter/Simplifier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/ac/e/interpreter/instructions/Assign.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/ac/e/interpreter/instructions/Assign.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/ac/e/interpreter/instructions/AssignOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/ac/e/interpreter/instructions/AssignOperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/ac/e/interpreter/values/Entier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/ac/e/interpreter/values/Entier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/ac/e/interpreter/values/Variable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/ac/e/interpreter/values/Variable.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

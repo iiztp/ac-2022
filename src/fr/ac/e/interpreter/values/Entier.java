@@ -15,6 +15,11 @@ public class Entier implements Value
     }
 
     @Override
+    public int moduloEvaluate(int number) {
+        return x%number;
+    }
+
+    @Override
     public int hashCode() {
         return 0;
     }

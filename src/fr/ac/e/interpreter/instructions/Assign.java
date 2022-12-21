@@ -21,6 +21,12 @@ public class Assign extends Instruction
     }
 
     @Override
+    public int moduloEvaluate(int number) {
+        // Modulo déjà fait par Entier (donc variable lors de l'assignement)
+        return evaluate();
+    }
+
+    @Override
     public boolean contains(Variable l) {
         return right.equals(l);
     }

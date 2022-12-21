@@ -29,6 +29,29 @@ public class AssignOperator extends Instruction{
     }
 
     @Override
+    public int moduloEvaluate(int number) {
+        int i = switch (op) {
+            case "+" -> (t0.evaluate() + t1.evaluate())%number;
+            case "*" -> multiply(t0.evaluate(),t1.evaluate(), number);
+            case "-" -> (t0.evaluate() - t1.evaluate())%number;
+            default -> 0;
+        };
+        SymbolTable.table.addCorrespondance(left, i);
+        return i;
+    }
+
+    private int multiply(int x, int y, int p) {
+        int result = 0;
+        while(y != 0) {
+            if((y & 1) != 0)
+                result = (result+x)%p;
+            y >>= 1;
+            x = (2*x)%p;
+        }
+        return result;
+    }
+
+    @Override
     public boolean contains(Variable l) {
         return t0.equals(l) || t1.equals(l);
     }

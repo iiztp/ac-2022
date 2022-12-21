@@ -50,7 +50,6 @@ public class Simplifier {
                 Instruction jns = simplifiedP.instructions.get(j);
                 // If left ins variable is used, it isn't meant to be removed
                 if(jns.contains(ins.left)) {
-                    System.out.println(ins);
                     remove = false;
                 }
                 // If we find another x
@@ -80,32 +79,29 @@ public class Simplifier {
                 // x = 0, y = 0
                 if(tempValues.getOrDefault(op.t0, -1).equals(tempValues.getOrDefault(op.t1, -2)) && tempValues.getOrDefault(op.t0, -1).equals(0)) {
                     instructions.set(i, new Assign(op.left, new Entier(0)));
-                    continue;
-                }
+                } else
                 // 0 * x or 0 + x
                 if((op.t0.equals(new Entier(0)) || tempValues.getOrDefault(op.t0, -1).equals(0)) && (op.op.equals("+") || op.op.equals("*"))) {
                     if(op.op.equals("+"))
                         instructions.set(i, new Assign(op.left, op.t1));
                     if(op.op.equals("*"))
                         instructions.set(i, new Assign(op.left, new Entier(0)));
-                    continue;
-                }
+                } else
                 // x * 0 or x + 0 or x - 0
                 if(op.t1.equals(new Entier(0)) || tempValues.getOrDefault(op.t1, -1).equals(0)) {
                     if(op.op.equals("+") || op.op.equals("-"))
                         instructions.set(i, new Assign(op.left, op.t0));
                     if(op.op.equals("*"))
                         instructions.set(i, new Assign(op.left, new Entier(0)));
-                    continue;
-                }
+                } else
                 // 1 * x
                 if((op.t0.equals(new Entier(1)) || tempValues.getOrDefault(op.t0, -1).equals(1)) && op.op.equals("*")) {
                     instructions.set(i, new Assign(op.left, op.t1));
-                }
+                } else
                 // x * 1
                 if((op.t1.equals(new Entier(1)) || tempValues.getOrDefault(op.t1, -1).equals(1)) && op.op.equals("*")) {
                     instructions.set(i, new Assign(op.left, op.t0));
-                }
+                } else
                 // x - x
                 if((op.t0.equals(op.t1) || tempValues.getOrDefault(op.t0, -1).equals(tempValues.getOrDefault(op.t1, -2))) && op.op.equals("-")){
                     instructions.set(i, new Assign(op.left, new Entier(0)));
